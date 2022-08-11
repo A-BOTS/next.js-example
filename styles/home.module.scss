@@ -1,0 +1,100 @@
+@import "./uikit";
+
+.home{
+    &__subdata{
+        font-size: 2rem;
+        line-height: 1.7;
+        font-weight: normal;
+        text-align: center;
+        color: $gray;
+
+        @media screen and (max-width: 768px){
+            font-size: 1.4rem;
+        }
+
+        &_mb{
+            margin-bottom: 4rem;
+
+            @media screen and (max-width: 768px){
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__create{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1.5rem;
+    }
+
+    &__users{
+        max-width: 100%;
+    }
+
+    .table{
+        width: 100%;
+        min-width: 55rem;
+        overflow: hidden;
+        margin: 0 auto;
+
+        &__tr{
+            display: flex;
+            margin-bottom: -1px;
+        }
+
+        &__info{
+            width: calc(100% - 10rem);
+            display: grid;
+            grid-template-columns: 1fr 1fr 15rem 10rem;
+        }
+
+        &__td{
+            min-width: 0;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid $gray;
+            font-size: 1.4rem;
+            line-height: 1.7;
+            font-weight: normal;
+            color: $black;
+
+            @media screen and (max-width: 768px){
+                font-size: 1.2rem;
+                padding: 0.5rem 1rem;
+            }
+
+            &_first{
+                padding-left: 0;
+            }
+
+            &_last{
+                padding-right: 0;
+                text-align: right;
+            }
+
+            &_th{
+                font-weight: 500;
+            }
+
+            &_btns{
+                width: 10rem;
+                flex-shrink: 0;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                column-gap: 1rem;
+            }
+        }
+
+        &__link{
+            display: flex;
+            padding-left: 1rem;
+            color: $black;
+
+            &_trash{
+                color: $red;
+            }
+        }
+    }
+}
+

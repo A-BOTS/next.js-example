@@ -1,0 +1,40 @@
+@import "./variables";
+
+.alert {
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+    z-index: 999999;
+    display: flex;
+    justify-content: flex-end;
+    width: fit-content;
+  
+    &__content{
+      border-radius: 10px;
+      padding: 2.3rem 3.7rem;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      column-gap: 1rem;
+      max-width: 30rem;
+
+        @media screen and (max-width: 768px){
+            font-size: 1.4rem;
+        }
+
+        &_green{
+            background-color: rgba($green, 0.7);
+        }
+
+        &_red{
+                background-color: rgba($red, 0.7);
+        }
+
+        &__ico {
+            margin-right: 2rem;
+        }
+    }
+  }

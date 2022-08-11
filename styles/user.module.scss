@@ -1,0 +1,117 @@
+@import "./uikit";
+
+.user{
+    &__subdata{
+        font-size: 2rem;
+        line-height: 1.7;
+        font-weight: normal;
+        text-align: center;
+        color: $gray;
+
+        @media screen and (max-width: 768px){
+            font-size: 1.4rem;
+        }
+    }
+
+    .view{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text{
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: $black;
+
+        @media screen and (max-width: 768px){
+            font-size: 1.2rem;
+        }
+    }
+
+    &__form{
+        @extend .view;
+        row-gap: 1.5rem;
+    }
+
+    &__part{
+        @extend .view;
+        row-gap: 0.5rem;
+    }
+
+    &__label{
+        @extend .text;
+        font-weight: 500;
+    }
+
+    &__input{
+        @extend .text;
+        font-weight: normal;
+        border: 1px solid $gray;
+        border-radius: 0.8rem;
+        padding: 1rem 2rem;
+        background-color: transparent;
+        box-shadow: none;
+        outline: none;
+        width: 100%;
+
+        &_dp{
+            cursor: pointer;
+        }
+
+        &_ta{
+            resize: horizontal;
+            min-height: 20rem;
+        }
+
+        @media screen and (max-width: 768px){
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        &::placeholder{
+            color: $gray;
+        }
+    }
+    
+    .buttonlink{
+        max-width: 20rem;
+        margin-top: 4rem
+    }
+    
+    &__check{
+        @extend .text;
+        font-weight: normal;
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+        cursor: pointer;
+
+        &::before{
+            content: '';
+            display: block;
+            border-radius: 50%;
+            background-color: $red;
+            transition: background-color 0.5s;
+            width: 1.5rem;
+            height: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        &.active::before{
+            background-color: $green;
+        }
+    }
+
+    &__err{
+        font-size: 1.4rem;
+        line-height: 1.5;
+        font-weight: 500;
+        text-align: center;
+        color: $red;
+
+        @media screen and (max-width: 768px){
+            font-size: 1.2rem;
+        }
+    }
+}

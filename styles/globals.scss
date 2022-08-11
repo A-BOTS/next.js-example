@@ -1,0 +1,182 @@
+@import "./variables";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+*,:before,
+:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  letter-spacing: 0.1px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+  scroll-behavior: smooth;
+
+  @media screen and (max-width: 2800px){
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 2020px){
+    font-size: 10px;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: $white;
+  font-family: $font-roboto;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $black;
+  height: 100%;
+}
+
+#__next{
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container{
+  width: 100%;
+  max-width: $container_max_width;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+
+.opacity-null{
+  opacity: 0 !important;
+}
+
+.grow-full{
+  flex-grow: 1;
+}
+
+.no-viz{
+  display: none;
+}
+
+.no-scroll, .open-widgets, .open-popap{
+  overflow: hidden !important;
+}
+
+.hide-scroll{
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.hide-scroll::-webkit-scrollbar{
+  width: 0;
+}
+
+.custom-scroll{
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.custom-scroll::-webkit-scrollbar{
+  height: 8px;
+  width: 8px;
+  background-color: rgba($gray, 0.5);
+}
+.custom-scroll::-webkit-scrollbar-thumb{
+  height: 8px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px rgba($black, 0.3);
+  background-color: rgba($black, 0.3);
+}
+
+.select2 *{
+  outline: none !important;
+}
+
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle{
+  margin-left: -15px;
+}
+
+.gender__control{
+  outline: none !important;
+  border: 1px solid $gray !important;
+  border-radius: 0.8rem !important;
+  box-shadow: none !important;
+
+  @media screen and (max-width: 768px){
+    border-radius: 0.5rem;
+  }
+
+  .gender__value-container{
+    padding: 0.7rem 2rem;
+
+    @media screen and (max-width: 768px){
+      padding: 0.5rem 1rem;
+    }
+  }
+}

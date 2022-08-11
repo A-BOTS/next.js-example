@@ -1,0 +1,52 @@
+@import "./variables";
+
+.effect{
+  &:not(.active){
+      transition: transform 0.3s;
+
+      @media screen and (hover) {
+          cursor: pointer;
+          transition: opacity 1s, transform 0.3s;
+
+          &:hover {
+              opacity: 0.3;
+          }
+      }
+
+      &:active{
+          transform: scale(1.05);
+      }
+  }
+}
+
+.buttonlink{
+  padding: 1rem 3.5rem;
+  border-radius: 0.8rem;
+  background-color: $green;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+
+  @media screen and (max-width: 768px){
+    font-size: 1.4rem;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+  }
+}
+
+.error{
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: $red;
+}
+
+.link{
+  text-decoration: 1px dashed $black;
+}
